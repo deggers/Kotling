@@ -1,7 +1,11 @@
 package swing
 
+import java.awt.BorderLayout
+import java.awt.Container
 import java.util.*
+import javax.swing.JButton
 import javax.swing.JFrame
+import javax.swing.UIManager
 
 /*
 KotlingApp will add the KotlingUIComponent to the frame
@@ -14,6 +18,7 @@ A Swing.Frame can only hold one JComponent
 open class KotlingApp(private val primaryView: KotlingUIComponent) : Runnable {
     override fun run() {
         val myFrame = JFrame(primaryView.title)
+        myFrame.layout = BorderLayout()
 
         /* @TODO
         This will fire up an PropertyChange for "local"
@@ -24,7 +29,18 @@ open class KotlingApp(private val primaryView: KotlingUIComponent) : Runnable {
         // @TODO JFrame listens to ClientLanguageChange event..
         myFrame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 
-        myFrame.add(primaryView.root)
+        myFrame.add(primaryView.root, BorderLayout.CENTER)
+
+        val myButton = JButton("To english").also {
+            it.addActionListener {
+                myFrame.locale = Locale.ENGLISH
+                primaryView.root.locale = Locale.ENGLISH
+            }
+        }
+
+
+        myFrame.add(myButton, BorderLayout.NORTH)
+
         myFrame.setSize(300, 200)
         myFrame.isVisible = true
     }

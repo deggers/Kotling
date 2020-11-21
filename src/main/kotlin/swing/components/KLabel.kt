@@ -1,8 +1,9 @@
-package swing.layouts
+package swing.components
 
 import translation.I18n
 import java.awt.Graphics
 import javax.swing.JLabel
+
 
 class KLabel(private val lookupKey: String) : JLabel() {
     private val i18n = I18n()
@@ -22,6 +23,7 @@ class KLabel(private val lookupKey: String) : JLabel() {
 
     override fun paint(g: Graphics?) {
         super.paint(g)
+        println("Painted!")
         text = i18n.translate(lookupKey)
         revalidate()
     }

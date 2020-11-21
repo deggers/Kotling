@@ -8,6 +8,4 @@ which is instantiated from KotlingApp
  */
 
 abstract class KotlingView(title: String) : KotlingUIComponent(title) {
-    private val i18n = I18n()
-    fun translate(text: String): String = i18n.translate(text)
 }

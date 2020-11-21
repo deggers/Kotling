@@ -11,6 +11,8 @@ import javax.swing.JComponent
 abstract class KotlingUIComponent(var title: String = "") {
     abstract val root: JComponent
 
-
+    fun fire(value: String) {
+        println(value)
+    }
 
 }

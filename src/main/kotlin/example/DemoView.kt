@@ -1,13 +1,14 @@
-package swing
+package example
 
-import swing.layouts.BorderPane
-import swing.layouts.KLabel.Companion.kLabel
+import swing.KotlingView
+import swing.components.KButton.Companion.kButton
+import swing.layouts.BorderPane.Companion.borderPane
 import java.awt.Color
 import java.awt.Dimension
 import javax.swing.JPanel
 
 class DemoView : KotlingView("Demo") {
-    override val root = BorderPane.borderPane {
+    override val root = borderPane {
         top = JPanel().also {
             it.background = Color.ORANGE
             it.preferredSize = Dimension(200, 200)
@@ -24,6 +25,9 @@ class DemoView : KotlingView("Demo") {
             it.background = Color.BLUE
             it.preferredSize = Dimension(200, 200)
         }
-        center = kLabel { lookupKey = "hello" }
+        center = kButton {
+            lookupKey = "hello"
+            onClick = { fire(" clicked") }
+        }
     }
 }
