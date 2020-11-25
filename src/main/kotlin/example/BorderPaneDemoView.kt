@@ -7,7 +7,7 @@ import java.awt.Color
 import java.awt.Dimension
 import javax.swing.JPanel
 
-class DemoView : KotlingView("Demo") {
+class BorderPaneDemoView : KotlingView("Demo") {
     override val root = borderPane {
         top = JPanel().also {
             it.background = Color.ORANGE
