@@ -3,4 +3,4 @@ Just an idea about possible implementation to have a nicer developer expierience
 ** Layouts
 *** BorderPane
 The concept of a BorderPane is taken from JavaFX. It gives the possbility to set into the borders, top, left, bottom, right or the center any Component.
-[[ColorfulBorderpane.jpg]]
+![](ColorfulBorderPane.jpg)
