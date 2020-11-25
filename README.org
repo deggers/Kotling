@@ -6,6 +6,7 @@ The concept of a BorderPane is taken from JavaFX. It gives the possbility to set
 #+ATTR_HTML:title="BorderPane" width 100px
 [[BorderPane][file:colorfulborderpane.jpg]]
 
+This is possible via the DSL using plain JPanels:
 The actual code for this using plain JPanels is the following:
 #+BEGIN_SRC kotlin
   class BorderPaneDemoView : KotlingView("Demo") {
@@ -31,4 +32,31 @@ The actual code for this using plain JPanels is the following:
           }
       }
   }
+#+END_SRC
+
+Or by constructing a KBorderPane via its named arguments:
+#+BEGIN_SRC kotlin
+class ConstructorBorderPaneDemoView : KotlingView("Demo") {
+    override val root = KBorderPane(
+        top = JPanel().also {
+            it.background = Color.ORANGE
+            it.preferredSize = Dimension(200, 200)
+        },
+        left = JPanel().also {
+            it.background = Color.RED
+            it.preferredSize = Dimension(200, 200)
+        },
+        bottom = JPanel().also {
+            it.background = Color.GREEN
+            it.preferredSize = Dimension(200, 200)
+        },
+        right = JPanel().also {
+            it.background = Color.BLUE
+            it.preferredSize = Dimension(200, 200)
+        },
+        center = JPanel().also {
+            it.background = Color.LIGHT_GRAY
+        }
+    )
+}
 #+END_SRC

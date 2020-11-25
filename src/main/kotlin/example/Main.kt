@@ -6,7 +6,7 @@ import java.util.*
 import javax.swing.SwingUtilities
 import javax.swing.UIManager
 
-class MyApp : KotlingApp(DemoView())
+class MyApp : KotlingApp(DSLBorderPaneDemoView())
 
 fun main() {
     Locale.setDefault(Locale.GERMAN) // ensure a default local exists
