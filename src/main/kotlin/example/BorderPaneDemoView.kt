@@ -25,9 +25,8 @@ class BorderPaneDemoView : KotlingView("Demo") {
             it.background = Color.BLUE
             it.preferredSize = Dimension(200, 200)
         }
-        center = kButton {
-            lookupKey = "hello"
-            onClick = { fire(" clicked") }
+        center = JPanel().also {
+            it.background = Color.LIGHT_GRAY
         }
     }
 }

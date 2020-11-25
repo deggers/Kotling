@@ -5,3 +5,30 @@ Just an idea about possible implementation to have a nicer developer expierience
 The concept of a BorderPane is taken from JavaFX. It gives the possbility to set into the borders, top, left, bottom, right or the center any Component.
 #+ATTR_HTML:title="BorderPane" width 100px
 [[BorderPane][file:colorfulborderpane.jpg]]
+
+The actual code for this using plain JPanels is the following:
+#+BEGIN_SRC kotlin
+  class BorderPaneDemoView : KotlingView("Demo") {
+      override val root = borderPane {
+          top = JPanel().also {
+              it.background = Color.ORANGE
+              it.preferredSize = Dimension(200, 200)
+          }
+          left = JPanel().also {
+              it.background = Color.RED
+              it.preferredSize = Dimension(200, 200)
+          }
+          bottom = JPanel().also {
+              it.background = Color.GREEN
+              it.preferredSize = Dimension(200, 200)
+          }
+          right = JPanel().also {
+              it.background = Color.BLUE
+              it.preferredSize = Dimension(200, 200)
+          }
+          center = JPanel().also {
+              it.background = Color.LIGHT_GRAY
+          }
+      }
+  }
+#+END_SRC
