@@ -1,6 +1,16 @@
 * Kotling
 Just an idea about possible implementation to have a nicer developer expierience while doing UI.
-** Layouts
+
+** 🎯 Features
+- JavaFX like DSL abstraction for Swing
+- I18n Support (to be implemented)
+- Model-View-Intend (to be implemented)
+** 💡 Philosophy
+When developer have to switch form JavaFX to Swing for various reason, they are dealing with a learning curve before they can start building their front-end applications. Kotling, as a UI framework, was created with the idea of minimalism and follows the UNIX way, so that developer can quickly enter the world of Swing with a warm and trusted welcome.
+
+Kotling is inspired by TornadoFX, the most popular JavaFX DSL on the Internet. If you have ever implemented a front-end application using JavaFX or similar, then many methods and principles will seem very common to you.
+
+** 👀 Examples
 *** BorderPane
 The concept of a BorderPane is taken from JavaFX. It gives the possbility to set into the borders, top, left, bottom, right or the center any Component.
 #+ATTR_HTML:title="BorderPane" width 100px
