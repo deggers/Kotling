@@ -1,4 +1,4 @@
-* Kotling
+* Kotling (Just-Another-Sideproject)
 Just an idea about possible implementation to have a nicer developer expierience while doing UI.
 
 ** 🎯 Features
